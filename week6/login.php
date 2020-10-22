@@ -10,12 +10,12 @@
     <ul>
         <form action="admin.php" method="post">
             <li>
-                <label for="username">Username</label>
+                <label for="username">Username : </label>
                 <input type="text" name="username" id="username">
             </li>
 
             <li>
-                <label for="password">Password</label>
+                <label for="password">Passwor : </label>
                 <input type="password" name="password" id="password">
             </li>
 
