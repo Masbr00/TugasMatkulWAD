@@ -8,7 +8,7 @@
 <body>
     <h2>LOGIN ADMIN</h2>
     <ul>
-        <form action="login.php" method="post">
+        <form action="admin.php" method="post">
             <li>
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username">
@@ -22,21 +22,6 @@
             <li>
                 <button type="submit" name="submit">LOGIN</button>
             </li>
-
-            <?php
-                $username = NULL;
-                $password = NULL;
-                if (isset($_POST['username']))
-                {
-                    $username = $_POST['username'];
-                }
-                if (isset($_POST['password'])){
-                    $password = $_POST['password'];
-                }
-                if ($username != NULL && $password != NULL ) {
-                    header("Location:admin.php");
-                }
-            ?>
         </form>
     <ul>
 </body>
