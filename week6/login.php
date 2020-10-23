@@ -15,7 +15,7 @@
             </li>
 
             <li>
-                <label for="password">Passwor : </label>
+                <label for="password">Password : </label>
                 <input type="password" name="password" id="password">
             </li>
 
