@@ -8,7 +8,7 @@
     <script type="text/javascript" src="assets/js/bootstrap.js"></script>
     <title>Keluarga</title>
 </head>
-<body>
+<body class="bg-light">
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Home</a>
@@ -28,8 +28,42 @@
     <!-- end of navbar -->
 
     <!-- content -->
-    <div class="container mt-3 mx-auto">
-        <p>nyahaloo
+    <div class="container mt-3 mx-auto bg-white border rounded">
+        <!-- button -->
+        <a class="btn btn-primary mt-3" href="#" role="button">Tambah Data</a>
+        <!-- end of button -->
+        <div class="my-3 table-responsive">
+            <table class="table table-hover table-bordered" style="text-align:center">
+                <thead class="thead-dark">
+                    <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>Update data || Delete</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>Update data || Delete</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>Update data || Delete</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     <!-- end of content -->
 </body>
