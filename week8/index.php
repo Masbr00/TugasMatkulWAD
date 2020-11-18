@@ -6,6 +6,12 @@
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
     <script type="text/javascript" src="assets/js/jquery.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <!-- koneksi db -->
+    <?php
+        include ('config.php');
+        $result = $conn->query('SELECT keluarga.nama, status_keluarga.status FROM keluarga, status_keluarga WHERE keluarga.id_status = status_keluarga.id');
+    ?>
+    <!-- end of koneksi db -->
     <title>Keluarga</title>
 </head>
 <body class="bg-light">
@@ -29,38 +35,49 @@
 
     <!-- content -->
     <div class="container mt-3 mx-auto bg-white border rounded">
+
         <!-- button -->
         <a class="btn btn-primary mt-3" href="#" role="button">Tambah Data</a>
         <!-- end of button -->
+
         <div class="my-3 table-responsive">
-            <table class="table table-hover table-bordered" style="text-align:center">
-                <thead class="thead-dark">
+            <table class="table table-sm table-bordered table-hover" style="text-align:center">
+                <thead class="thead-dark"> <!-- head table -->
                     <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Nama</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Action</th>
+                        <th scope="col">No</th> 
+                        <th scope="col">Nama</th> 
+                        <th scope="col">Status</th> 
+                        <th scope="col">Action</th> 
                     </tr>
-                </thead>
+                </thead> <!-- end of head table -->
                 <tbody>
-                    <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>Update data || Delete</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>Update data || Delete</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>Update data || Delete</td>
-                    </tr>
+                <?php
+                    $i = 0;
+                    try {
+
+                        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                            echo '<tr>';
+                            echo '<th scope="row">';
+                            echo $i=$i+1;
+                            echo '</th>';
+                            
+                            echo '<td>';
+                            echo $row['nama'];
+                            echo '</td>';
+
+                            echo '<td>';
+                            echo $row['status'];
+                            echo '</td>';
+
+                            echo '<td>';
+                            echo 'Update Data || Delete';
+                            echo '</td>';
+                            echo '</tr>';
+                        }
+                    } catch (PDOException $e) {
+                        echo "Gagal: " . $e->getMessage();
+                    }
+                ?>
                 </tbody>
             </table>
         </div>
