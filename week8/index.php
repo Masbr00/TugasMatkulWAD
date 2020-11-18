@@ -37,9 +37,10 @@
     <div class="container mt-3 mx-auto bg-white border rounded">
 
         <!-- button -->
-        <a class="btn btn-primary mt-3" href="#" role="button">Tambah Data</a>
+        <button type="button" class="btn btn-primary btn-md mt-3" data-toggle="modal" data-target="#myModal">Tambah Data</button>
         <!-- end of button -->
 
+        <!-- Tabel Data -->
         <div class="my-3 table-responsive">
             <table class="table table-sm table-bordered table-hover" style="text-align:center">
                 <thead class="thead-dark"> <!-- head table -->
@@ -83,6 +84,29 @@
                 </tbody>
             </table>
         </div>
+        <!-- end of tabel data -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- konten modal -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" style="text-align:left">Tambah Data Keluarga </h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>NYAHALOOOOOOOOOOOOO</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Tambah</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                <!-- end of konten modal -->
+            </div>
+        </div>
+        <!-- modal -->
+
+        <!-- end of modal -->
     </div>
     <!-- end of content -->
 </body>
