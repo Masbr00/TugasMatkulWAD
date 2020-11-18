@@ -85,28 +85,53 @@
             </table>
         </div>
         <!-- end of tabel data -->
-        <div id="myModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <!-- konten modal -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" style="text-align:left">Tambah Data Keluarga </h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <p>NYAHALOOOOOOOOOOOOO</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Tambah</button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-                <!-- end of konten modal -->
-            </div>
-        </div>
-        <!-- modal -->
 
-        <!-- end of modal -->
+        <!-- MODAL FOR CREATE-->
+        <form action="tambah.php" action="get">
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- konten modal -->
+                    <div class="modal-content">
+                        <div class="modal-header bg-dark text-light">
+                            <h5 class="modal-title" style="text-align:left">Tambah Data Keluarga</h5>
+                            <button type="button" class="close" data-dismiss="modal" style="color:white">&times;</button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Nama</label>
+                                <input type="text" name="nama" class="form-control"></input>
+                            </div>
+
+                            <div class="form-group">
+                            <label>Status</label>
+                            <select name="statusnya" class="form-control">
+                                <option value ="1">Orang Tua</option>
+                                <option value ="2">Saudara Kandung</option>
+                                <option value ="3">Paman / Om</option>
+                                <option value ="4">Bibi / Tante</option>
+                                <option value ="5">Bude</option>
+                                <option value ="6">Pakde</option>
+                                <option value ="7">Eyang Putri</option>
+                                <option value ="8">Eyang Kangkung</option>
+                                <option value ="9">Saudara Sepupu</option>
+                                <option value ="10">Anak</option>
+                            </select>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-md" name="submit" value="submit">Tambah</button>
+                            <button type="button" class="btn btn-danger btn-md" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                    <!-- end of konten modal -->
+                </div>
+            </div>
+        </form>
+        <!-- end of MODAL FOR CREATE -->
+
+        
     </div>
     <!-- end of content -->
 </body>
