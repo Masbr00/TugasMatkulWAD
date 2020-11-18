@@ -70,7 +70,9 @@
                             echo '</td>';
 
                             echo '<td>';
-                            echo 'Update Data || Delete';
+                            ?> <!-- POTONG DISINI BUAT LINK AKSI -->
+                            <a href="hapus.php?name=<?php echo $row['nama']; ?>">Delete</a>
+                            <?php // SAMBUNG DISNI UNTUK LANJUT PHP
                             echo '</td>';
                             echo '</tr>';
                         }
