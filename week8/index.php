@@ -53,7 +53,6 @@
                 </thead> <!-- end of head table -->
                 <tbody>
                 <?php
-                    $i = 0;
                     try {
 
                         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
@@ -72,7 +71,8 @@
 
                             echo '<td>';
                             ?> <!-- POTONG DISINI BUAT LINK AKSI -->
-                            <a href="#" data-toggle="modal" data-target="#myModal2">Update Data</a> || <a href="hapus.php?name=<?php echo $row['id']; ?>">Delete</a>
+                            <a href="update.php?name=<?php echo $row['nama']; ?>">Update Data</a> 
+                            || <a href="hapus.php?name=<?php echo $row['id']; ?>">Delete</a>
                             <?php // SAMBUNG DISNI UNTUK LANJUT PHP
                             echo '</td>';
                             echo '</tr>';
@@ -136,52 +136,6 @@
             </div>
         </form>
         <!-- end of MODAL FOR CREATE -->
-        
-        <!-- MODAL FOR UPDATE -->
-        <form action="update.php" action="get">
-            <div id="myModal2" class="modal fade" role="dialog">
-                <div class="modal-dialog">
-                    <!-- konten modal -->
-                    <div class="modal-content">
-                        <div class="modal-header bg-dark text-light">
-                            <h5 class="modal-title" style="text-align:left">Update Data Keluarga</h5>
-                            <button type="button" class="close" data-dismiss="modal" style="color:white">&times;</button>
-                        </div>
-
-                        <div class="modal-body">
-
-                            <div class="form-group">
-                                <label>Nama Baru</label>
-                                <input type="text" name="nama" class="form-control"></input>
-                            </div>
-
-                            <div class="form-group">
-                            <label>Status Baru</label>
-                            <select name="statusnya" class="form-control">
-                                <option value ="1">Orang Tua</option>
-                                <option value ="2">Saudara Kandung</option>
-                                <option value ="3">Paman / Om</option>
-                                <option value ="4">Bibi / Tante</option>
-                                <option value ="5">Bude</option>
-                                <option value ="6">Pakde</option>
-                                <option value ="7">Eyang Putri</option>
-                                <option value ="8">Eyang Kangkung</option>
-                                <option value ="9">Saudara Sepupu</option>
-                                <option value ="10">Anak</option>
-                            </select>
-                            </div>
-                        </div>
-
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary btn-md" name="update" value="update">Update</button>
-                            <button type="button" class="btn btn-danger btn-md" data-dismiss="modal">Cancel</button>
-                        </div>
-                    </div>
-                    <!-- end of konten modal -->
-                </div>
-            </div>
-        </form>
-        <!-- end of MODAL FOR UPDATE -->
         
     </div>
     <!-- end of content -->
