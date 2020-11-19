@@ -54,11 +54,11 @@
                 <tbody>
                 <?php
                     try {
-
+                        $i=0;
                         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                             echo '<tr>';
                             echo '<th scope="row">';
-                            echo $row['id'];
+                            echo $i+=1;
                             echo '</th>';
                             
                             echo '<td>';
@@ -101,7 +101,7 @@
                         <div class="modal-body">
                             <div class="form-group">
                                 <label>No/ID</label>
-                                <input type="number" name="id" class="form-control"></input>
+                                <input type="number" name="id" class="form-control" placeholder="Bisa dikosongkan"></input>
                             </div>
 
                             <div class="form-group">

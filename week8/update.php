@@ -49,9 +49,10 @@
 
     <!-- content -->
     <div class="container mt-3 mx-auto bg-white border rounded">
-        <div class="card mx-auto border-rounded" style="width: 18rem;">
+        <div class="card mx-auto border-rounded my-3" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Update Data Keluarga</h5>
+                <hr>
                 <form action="update.php" method="get">
                     <div class="form-group">
                         <label>Data yang ingin dirubah : </label>
@@ -78,7 +79,7 @@
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary" name="update">Update</button>
-                        <button type="cancel" class="btn btn-danger">Cancel</button>
+                        <a href="index.php" type="cancel" class="btn btn-danger">Cancel</a>
                     </div>
                 </form>
             </div>
